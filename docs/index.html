@@ -2,45 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fahmi Ganteng</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
     <a href="#" class="logo">Portofolio</a>
     <nav class="navbar">
-      <a href="#" style="--i:1;" class="active">Home</a>
-      <a href="#" style="--i:2;">About</a>
-      <a href="#" style="--i:3;">Skills</a>
-      <a href="#" style="--i:4;">Portofolio</a>
-      <a href="#" style="--i:5;">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="home">
+  <!-- Home -->
+  <section class="home" id="home">
     <div class="home-content">
-      <h3>hello, It's Me</h3>
+      <h3>Hello, It's Me</h3>
       <h1>Muhammad Fahmi</h1>
       <h3>And I am a <span id="multiple-text"></span></h3>
       <p>
         Saya seorang frontend developer yang memiliki passion di dunia teknologi dan desain. 
         Saya selalu bersemangat untuk menciptakan tampilan antarmuka yang menarik, interaktif, 
-        dan fungsional. Dengan pengalaman dan dedikasi, saya siap memberikan yang terbaik.
+        dan fungsional.
       </p>
       <div class="social-media">
-        <a href="https://www.instagram.com/fahmiiverse?igsh=N3Bud2NnbWI1Nzhu"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-instagram'></i></a>
         <a href="#"><i class='bx bxl-whatsapp'></i></a>
         <a href="#"><i class='bx bxl-facebook'></i></a>
         <a href="#"><i class='bx bxl-twitter'></i></a>
       </div>
       <a href="#" class="btn">Download CV</a>
     </div>
-
     <div class="home-img">
       <img class="poto" src="home.png" alt="Fahmi's Image">
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="about-img">
+      <img src="home.png" alt="About Fahmi">
+    </div>
+    <div class="about-content">
+      <h2 class="heading">About <span>Me</span></h2>
+      <h3>I am a <span id="about-text"></span></h3>
+      <p>
+        Halo! Saya <b>Muhammad Fahmi</b>, seorang <b>Frontend Developer</b> yang 
+        bersemangat di bidang teknologi, desain, dan pengembangan web. 
+        Saya suka menciptakan tampilan antarmuka yang <b>modern</b>, 
+        <b>interaktif</b>, dan <b>responsif</b>.
+      </p>
+      <p>
+        Dengan pengalaman coding saya, saya selalu berusaha 
+        menghadirkan hasil yang tidak hanya fungsional tetapi juga estetis. 
+        Bagi saya, setiap detail sangat penting, mulai dari user experience 
+        hingga performa aplikasi.
+      </p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <div class="skills-img">
+      <img src="home.png" alt="Skills Fahmi">
+    </div>
+    <div class="skills-content">
+      <h2 class="heading">My <span>Skills</span></h2>
+      <h3>I have skills in <span id="skills-text"></span></h3>
+      <p>
+        Saya menguasai berbagai teknologi dan tools dalam pengembangan web. 
+        Mulai dari <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b>, hingga framework modern. 
+        Saya juga selalu mempelajari hal baru untuk meningkatkan kemampuan saya.
+      </p>
+      <a href="#" class="btn">See More</a>
     </div>
   </section>
 
