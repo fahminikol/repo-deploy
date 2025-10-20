@@ -1,4 +1,4 @@
-// Typed.js
+// ==================== Typed.js ====================
 var typed = new Typed("#multiple-text", {
   strings: ["Frontend Developer", "Gamer", "Blogger"],
   typeSpeed: 100,
@@ -19,9 +19,11 @@ window.onscroll = () => {
     let id = sec.getAttribute("id");
 
     if (top >= offset && top < offset + height) {
-      navLinks.forEach(links => {
-        links.classList.remove("active");
-        document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
       });
     }
   });
@@ -43,4 +45,31 @@ var typedSkills = new Typed("#skills-text", {
   backSpeed: 100,
   backDelay: 1000,
   loop: true
+});
+
+// Typed.js Portfolio
+var typedPortfolio = new Typed("#portfolio-text", {
+  strings: ["Creative Projects", "Web Design", "Frontend Works"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+});
+
+// ==================== EmailJS ====================
+(function() {
+  emailjs.init("YEvMbhH-fwjfTh0HbD"); // 🔑 Public Key kamu
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_vuk15u", "template_2nde9rf", this)
+    .then(() => {
+      alert("✅ Pesan berhasil dikirim! Terima kasih telah menghubungi saya 😊");
+      this.reset();
+    }, (error) => {
+      alert("❌ Gagal mengirim pesan. Silakan coba lagi.");
+      console.log("EmailJS Error:", error);
+    });
 });
