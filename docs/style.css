@@ -1,419 +1,585 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background: #1f242d;
-    color: #fff;
-  }
-  
-  /* ===== Header ===== */
-  .header {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-  
-  .logo {
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-  }
-  
-  .navbar a {
-    display: inline-block;
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 35px;
-    transition: .3s;
-    opacity: 0;
-    animation: slideTop 0.5s ease forwards;
-    animation-delay: 0.2s;
-  }
-  
-  .navbar a:hover,
-  .navbar a.active {
-    color: #0ef;
-  }
-  
-  /* ===== Home ===== */
-  .home {
-    position: relative;
-    width: 100%;
-    min-height: 100vh; /* full layar */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 70px 10% 0;
-    flex-direction: row;
-  }
-  
-  .home-content {
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards 1s;
-  }
-  
-  .home-content h3,
-  .home-content h1,
-  .home-content p {
-    margin: 0;
-  }
-  
-  .home-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-    animation-delay: 2s, 3s;
-  }
-  
-  .poto {
-    width: auto;
-    height: 600px;
-  }
-  
-  .home-content p {
-    text-align: left;
-    font-size: 20px;
-    line-height: 1.8;
-    margin: 20px 0;
-  }
-  
-  .home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
-    margin: -3px 0;
-    opacity: 0;
-    animation: slideTop 1s ease forwards 1.2s;
-  }
-  
-  .home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards 0.8s;
-  }
-  
-  .home-content h3 span {
-    color: #0ef;
-  }
-  
-  .social-media a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #0ef;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #0ef;
-    text-decoration: none;
-    margin: 30px 15px 30px 0;
-    transition: 0.5s ease;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards 1.5s;
-  }
-  
-  .social-media a:hover {
-    background: #0ef;
-    color: #1f242d;
-    box-shadow: 0 0 20px #0ef;
-    opacity: 1;
-    animation: slideLeft 1s ease forwards 1.8s;
-    animation-delay: 0.2s;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #0ef;
-    border-radius: 40px;
-    box-shadow: 0 0 10px #0ef;
-    font-size: 16px;
-    color: #1f242d;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards 1.8s;
-  }
-  
-  /* ===== About ===== */
-  .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    padding: 100px 10%;
-    background: #1f242d; /* konsisten */
-    flex-wrap: wrap;
-    min-height: 100vh; /* full layar */
-  }
-  
-  .about-img img {
-    width: 350px;
-    border-radius: 20px;
-    opacity: 0;
-    transform: scale(0.8);
-    animation: zoomIn 1s ease forwards;
-    animation-delay: 0.5s;
-    box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .about-img img:hover {
-    transform: scale(0.9) rotate(-2deg);
-    box-shadow: 0 0 35px rgba(0, 238, 255, 0.6);
-  }
-  
-  .about-content {
-    max-width: 600px;
-    opacity: 0;
-    transform: translateX(100px);
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
-  }
-  
-  .about-content .heading {
-    font-size: 50px;
-    margin-bottom: 15px;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 1.2s;
-  }
-  
-  .about-content .heading span {
-    color: #0ef;
-  }
-  
-  .about-content h3 {
-    font-size: 26px;
-    color: #0ef;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1.4s;
-  }
-  
-  .about-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
-    animation-delay: 1.6s;
-  }
-  
-  /* ===== Keyframes ===== */
-  @keyframes slideRight {
-    0% { transform: translateX(-100px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-  }
-  
-  @keyframes slideTop {
-    0% { transform: translateY(100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-  }
-  
-  @keyframes slideBottom {
-    0% { transform: translateY(-100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-  }
-  
-  @keyframes slideLeft {
-    0% { transform: translateX(-100px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-  }
-  
-  @keyframes zoomIn {
-    0% { transform: scale(0); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-  
-  @keyframes floatImage {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-24px); }
-    100% { transform: translateY(0); }
-  }
-  
-  @keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Tambahan animasi untuk About agar sama seperti Home */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1f242d;
+  color: #fff;
+}
+
+/* ===== Header ===== */
+.header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 35px;
+  transition: .3s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #0ef;
+}
+
+/* ===== Home ===== */
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* full layar */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 10% 0;
+  flex-direction: row;
+}
+
+.home-content {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards 1s;
+}
+
+.home-content h3,
+.home-content h1,
+.home-content p {
+  margin: 0;
+}
+
+.home-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 2s, 3s;
+}
+
+.poto {
+  width: auto;
+  height: 600px;
+}
+
+.home-content p {
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: -3px 0;
+  opacity: 0;
+  animation: slideTop 1s ease forwards 1.2s;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 1s ease forwards 0.8s;
+}
+
+.home-content h3 span {
+  color: #0ef;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  margin: 30px 15px 30px 0;
+  transition: 0.5s ease;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards 1.5s;
+}
+
+.social-media a:hover {
+  background: #0ef;
+  color: #1f242d;
+  box-shadow: 0 0 20px #0ef;
+  opacity: 1;
+  animation: slideLeft 1s ease forwards 1.8s;
+  animation-delay: 0.2s;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #0ef;
+  font-size: 16px;
+  color: #1f242d;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slideTop 1s ease forwards 1.8s;
+}
+
+/* ===== About ===== */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 100px 10%;
+  background: #1f242d; /* konsisten */
+  flex-wrap: wrap;
+  min-height: 100vh; /* full layar */
+}
+
 .about-img img {
-    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-    animation-delay: 0.5s, 2s;
-  }
-  
-  .about-content h3 span {
-    color: #0ef;
-  }
+  width: 350px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 0.5s;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  /* ===== Skills ===== */
+.about-img img:hover {
+  transform: scale(0.9) rotate(-2deg);
+  box-shadow: 0 0 35px rgba(0, 238, 255, 0.6);
+}
+
+.about-content {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.about-content .heading {
+  font-size: 50px;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.about-content .heading span {
+  color: #0ef;
+}
+
+.about-content h3 {
+  font-size: 26px;
+  color: #0ef;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1.4s;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 1.6s;
+}
+
+/* ===== Keyframes ===== */
+@keyframes slideRight {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideTop {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideBottom {
+  0% { transform: translateY(-100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-24px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Tambahan animasi untuk About agar sama seperti Home */
+.about-img img {
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 0.5s, 2s;
+}
+
+.about-content h3 span {
+  color: #0ef;
+}
+
+/* ===== Skills ===== */
 .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    padding: 100px 10%;
-    background: #1f242d;
-    flex-wrap: wrap;
-    min-height: 100vh;
-  }
-  
-  .skills-img img {
-    width: 350px;
-    border-radius: 20px;
-    opacity: 0;
-    transform: scale(0.8);
-    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-    animation-delay: 0.5s, 2s;
-    box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .skills-img img:hover {
-    transform: scale(0.9) rotate(-2deg);
-    box-shadow: 0 0 35px rgba(0, 238, 255, 0.6);
-  }
-  
-  .skills-content {
-    max-width: 600px;
-    opacity: 0;
-    transform: translateX(100px);
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
-  }
-  
-  .skills-content .heading {
-    font-size: 50px;
-    margin-bottom: 15px;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 1.2s;
-  }
-  
-  .skills-content .heading span {
-    color: #0ef;
-  }
-  
-  .skills-content h3 {
-    font-size: 26px;
-    color: #0ef;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1.4s;
-  }
-  
-  .skills-content p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
-    animation-delay: 1.6s;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 100px 10%;
+  background: #1f242d;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
 
-  /* ... kode CSS kamu sebelumnya tetap ... */
+.skills-img img {
+  width: 350px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 0.5s, 2s;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-img img:hover {
+  transform: scale(0.9) rotate(-2deg);
+  box-shadow: 0 0 35px rgba(0, 238, 255, 0.6);
+}
+
+.skills-content {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.skills-content .heading {
+  font-size: 50px;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.skills-content .heading span {
+  color: #0ef;
+}
+
+.skills-content h3 {
+  font-size: 26px;
+  color: #0ef;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1.4s;
+}
+
+.skills-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 1.6s;
+}
+
+/* ... kode CSS kamu sebelumnya tetap ... */
 
 /* ===== Responsif Tambahan ===== */
 @media (max-width: 992px) {
-  .home {
-    flex-direction: column;
-    text-align: center;
-    padding: 100px 5% 0;
-  }
+.home {
+  flex-direction: column;
+  text-align: center;
+  padding: 100px 5% 0;
+}
 
-  .home-img {
-    margin-top: 30px;
-  }
+.home-img {
+  margin-top: 30px;
+}
 
-  .poto {
-    max-width: 80%;
-    height: auto;
-  }
+.poto {
+  max-width: 80%;
+  height: auto;
+}
 
-  .about, .skills {
-    flex-direction: column;
-    padding: 80px 5%;
-    text-align: center;
-  }
+.about, .skills {
+  flex-direction: column;
+  padding: 80px 5%;
+  text-align: center;
+}
 
-  .about-img img,
-  .skills-img img {
-    width: 80%;
-    max-width: 300px;
-  }
+.about-img img,
+.skills-img img {
+  width: 80%;
+  max-width: 300px;
+}
 
-  .about-content,
-  .skills-content {
-    transform: none;
-    opacity: 1;
-    animation: none;
-    margin-top: 20px;
-  }
+.about-content,
+.skills-content {
+  transform: none;
+  opacity: 1;
+  animation: none;
+  margin-top: 20px;
+}
 }
 
 @media (max-width: 576px) {
-  .header {
-    padding: 15px 5%;
-    flex-direction: column;
-    align-items: flex-start;
+.header {
+  padding: 15px 5%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.navbar a {
+  font-size: 16px;
+  margin: 0 10px 10px 0;
+}
+
+.home-content h1 {
+  font-size: 36px;
+}
+
+.home-content h3 {
+  font-size: 22px;
+}
+
+.home-content p {
+  font-size: 16px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+}
+
+/* ===== Portfolio ===== */
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 100px 10%;
+  background: #1f242d;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.portfolio-img img {
+  width: 350px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 0.5s, 2s;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-img img:hover {
+  transform: scale(0.9) rotate(-2deg);
+  box-shadow: 0 0 35px rgba(0, 238, 255, 0.6);
+}
+
+.portfolio-content {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.portfolio-content .heading {
+  font-size: 50px;
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1.2s;
+}
+
+.portfolio-content .heading span {
+  color: #0ef;
+}
+
+.portfolio-content h3 {
+  font-size: 26px;
+  color: #0ef;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 1.4s;
+}
+
+.portfolio-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 1.6s;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+  background: #1f242d;
+  padding: 100px 10%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.contact .heading {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.contact .heading span {
+  color: #0ef;
+}
+
+.contact form {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #2a2f3a;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.15);
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contact form .input-box input {
+  width: 48%;
+  padding: 15px;
+  background: #1f242d;
+  border: 2px solid #0ef;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.contact form textarea {
+  width: 100%;
+  padding: 15px;
+  background: #1f242d;
+  border: 2px solid #0ef;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  resize: none;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  box-shadow: 0 0 15px #0ef;
+  outline: none;
+}
+
+.contact form .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #0ef;
+  border: none;
+  border-radius: 40px;
+  font-size: 18px;
+  color: #1f242d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact form .btn:hover {
+  box-shadow: 0 0 25px #0ef;
+  transform: scale(1.05);
+}
+
+/* Responsive Contact */
+@media (max-width: 768px) {
+  .contact form .input-box input {
+    width: 100%;
+    margin-bottom: 15px;
   }
 
-  .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .navbar a {
-    font-size: 16px;
-    margin: 0 10px 10px 0;
-  }
-
-  .home-content h1 {
+  .contact .heading {
     font-size: 36px;
-  }
-
-  .home-content h3 {
-    font-size: 22px;
-  }
-
-  .home-content p {
-    font-size: 16px;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 14px;
   }
 }
