@@ -37,7 +37,6 @@
         <a href="#"><i class='bx bxl-facebook'></i></a>
         <a href="#"><i class='bx bxl-twitter'></i></a>
       </div>
-      <a href="#" class="btn">Download CV</a>
     </div>
     <div class="home-img">
       <img class="poto" src="home.png" alt="Fahmi's Image">
@@ -85,8 +84,42 @@
     </div>
   </section>
 
-  <!-- Script -->
+  <!-- Portfolio -->
+  <section class="portfolio" id="portofolio">
+    <div class="portfolio-img">
+      <img src="home.png" alt="Portfolio Fahmi">
+    </div>
+    <div class="portfolio-content">
+      <h2 class="heading">My <span>Portfolio</span></h2>
+      <h3>Check out my <span id="portfolio-text"></span></h3>
+      <p>
+        Berikut beberapa proyek yang telah saya buat, mulai dari desain web, 
+        aplikasi sederhana, hingga landing page interaktif. 
+        Setiap proyek mencerminkan keahlian dan dedikasi saya di bidang frontend development.
+      </p>
+      <a href="#" class="btn">Download CV</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <form id="contact-form">
+      <div class="input-box">
+        <input type="text" name="from_name" placeholder="Full Name" required>
+        <input type="email" name="from_email" placeholder="Email Address" required>
+      </div>
+      <div class="input-box">
+        <input type="text" name="subject" placeholder="Email Subject" required>
+      </div>
+      <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+  </section>
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
